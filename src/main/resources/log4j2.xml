@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+        <RollingFile name="RollingFileTimeAndSize" fileName="/gwt3/logs/Gwt3App.log"
+                     filePattern="${dirname}/logs/$${date:yyyy-MM}/app-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d{DEFAULT} [ %-5p] [%32.32c ] - %m%n</Pattern><!--[ %32.32c]-->
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="100 KB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!--<Root level="INFO">-->
+            <!--<AppenderRef ref="RollingFileTimeAndSize"/>-->
+
+        <!--</Root>-->
+        <logger name="com.mySampleApplication.server.MySampleApplicationServiceImpl" level="INFO">
+            <AppenderRef ref="RollingFileTimeAndSize"/>
+        </logger>
+        <logger name="com.mySampleApplication.server.MyRemoteLoggingServlet" level="INFO">
+            <AppenderRef ref="RollingFileTimeAndSize"/>
+        </logger>
+
+
+        <!--<logger name="com.google.gwt.logging.server.RemoteLoggingServiceImpl" level="INFO">-->
+            <!--<AppenderRef ref="RollingFileTimeAndSize"/>-->
+        <!--</logger>-->
+    </Loggers>
+
+</Configuration>

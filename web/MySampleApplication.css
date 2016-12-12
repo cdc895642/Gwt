@@ -1,0 +1,91 @@
+body {
+    font-family: serif;
+    font-size: 16px;
+}
+
+#wrapper  {
+    margin: 0px;
+    padding: 0px;
+    /*max-width: 980px;*/
+    width: 100%;
+
+    /*border:1px solid #CDCDCD*/
+}
+
+header {
+    /*padding: 3px;*/
+
+    /*padding: 10px 0;*/
+    /*text-align: justify;*/
+    letter-spacing: 1px;
+    height: 100px;
+
+}
+
+@media screen and (max-width: 270px) {
+    header {
+        height: auto;
+
+    }
+}
+
+header h1,
+header div {
+    /*display: inline-block;*/
+    /*float:left;*/
+    clear:right;
+}
+
+header img {
+    float:left;
+}
+.label {
+    float:left;
+}
+.input{
+    float:right;
+}
+.panel{
+    float:right;
+}
+/*header img,*/
+.button{
+    margin-top: 1ex;
+}
+
+@media screen and (max-width: 480px) {
+    .label, input {
+        float: none;
+        clear:both;
+        display: block;
+    }
+    .panel{
+        float:none;
+        clear:both;
+    }
+}
+#main-content{
+    /*text-align:center;*/
+    /*display: table;*/
+}
+#main {
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*vertical-align: middle;*/
+    /*display:inline-block;*/
+}
+
+footer {
+    /*padding: 5px;*/
+    /*height: 3em;*/
+    position: fixed;
+    /*margin: 10px auto;*/
+    width: 100%;
+    /*left: 0;*/
+    bottom: 0;
+    text-align: center;
+}
+
+
+
+
