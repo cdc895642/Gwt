@@ -2,6 +2,7 @@ package time;
 
 import org.junit.Test;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -10,11 +11,14 @@ import static org.junit.Assert.*;
  */
 public class TimeTest {
     @Test
+    @SuppressWarnings("all")
     public void getTimeTest(){
         String miliS="1481540858849";
         Long convertLong=Long.parseLong(miliS);
         assertEquals(miliS,convertLong.toString());
         Date date=new Date(convertLong);
         System.out.println(date);
+        assertEquals(13,date.getHours());
+        assertEquals(7,date.getMinutes());
     }
 }

@@ -2,7 +2,7 @@
 <Configuration>
 
     <Appenders>
-        <RollingFile name="RollingFileTimeAndSize" fileName="/gwt3/logs/Gwt3App.log"
+        <RollingFile name="RollingFileTimeAndSize" fileName="gwt3/logs/Gwt3App.log"
                      filePattern="${dirname}/logs/$${date:yyyy-MM}/app-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%d{DEFAULT} [ %-5p] [%32.32c ] - %m%n</Pattern><!--[ %32.32c]-->
