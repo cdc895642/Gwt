@@ -16,10 +16,6 @@
     </Appenders>
 
     <Loggers>
-        <!--<Root level="INFO">-->
-            <!--<AppenderRef ref="RollingFileTimeAndSize"/>-->
-
-        <!--</Root>-->
         <logger name="com.mySampleApplication.server.MySampleApplicationServiceImpl" level="INFO">
             <AppenderRef ref="RollingFileTimeAndSize"/>
         </logger>
@@ -29,10 +25,6 @@
         <logger name="com.mySampleApplication.hibernate.util.HibernateUtil" level="INFO">
             <AppenderRef ref="RollingFileTimeAndSize"/>
         </logger>
-
-        <!--<logger name="com.google.gwt.logging.server.RemoteLoggingServiceImpl" level="INFO">-->
-            <!--<AppenderRef ref="RollingFileTimeAndSize"/>-->
-        <!--</logger>-->
     </Loggers>
 
 </Configuration>

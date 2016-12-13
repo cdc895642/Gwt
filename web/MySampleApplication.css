@@ -6,33 +6,22 @@ body {
 #wrapper  {
     margin: 0px;
     padding: 0px;
-    /*max-width: 980px;*/
     width: 100%;
-
-    /*border:1px solid #CDCDCD*/
 }
 
 header {
-    /*padding: 3px;*/
-
-    /*padding: 10px 0;*/
-    /*text-align: justify;*/
     letter-spacing: 1px;
     height: 100px;
-
 }
 
 @media screen and (max-width: 270px) {
     header {
         height: auto;
-
     }
 }
 
 header h1,
 header div {
-    /*display: inline-block;*/
-    /*float:left;*/
     clear:right;
 }
 
@@ -48,7 +37,7 @@ header img {
 .panel{
     float:right;
 }
-/*header img,*/
+
 .button{
     margin-top: 1ex;
 }
@@ -64,24 +53,10 @@ header img {
         clear:both;
     }
 }
-#main-content{
-    /*text-align:center;*/
-    /*display: table;*/
-}
-#main {
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-    /*vertical-align: middle;*/
-    /*display:inline-block;*/
-}
 
 footer {
-    /*padding: 5px;*/
-    /*height: 3em;*/
     position: fixed;
-    /*margin: 10px auto;*/
     width: 100%;
-    /*left: 0;*/
     bottom: 0;
     text-align: center;
 }

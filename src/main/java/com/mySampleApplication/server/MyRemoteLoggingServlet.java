@@ -1,10 +1,7 @@
 package com.mySampleApplication.server;
 
-//import com.google.gwt.logging.shared.RemoteLoggingService;
 import com.google.gwt.core.server.StackTraceDeobfuscator;
-import com.google.gwt.logging.server.RemoteLoggingServiceUtil;
 import com.google.gwt.logging.shared.RemoteLoggingService;
-import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

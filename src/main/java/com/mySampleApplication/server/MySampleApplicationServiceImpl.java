@@ -4,19 +4,12 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.mySampleApplication.client.MySampleApplicationService;
 import com.mySampleApplication.hibernate.db.tables.User;
 import com.mySampleApplication.hibernate.service.UserService;
-import com.mySampleApplication.hibernate.util.HibernateUtil;
 import com.mySampleApplication.security.PasswordUtils;
 import com.mySampleApplication.server.day.Day;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.hibernate.SessionFactory;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.time.LocalTime;
 import java.util.Date;
-import java.util.Enumeration;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -24,17 +17,6 @@ public class MySampleApplicationServiceImpl extends RemoteServiceServlet impleme
 
     private static final Logger logger = LogManager.getLogger(MySampleApplicationServiceImpl.class.getName());
 
-//    @Override
-//    protected String readContent(HttpServletRequest request) throws ServletException, IOException {
-//        Enumeration<String> se=request.getHeaderNames();
-//        String re="";
-//        while(se.hasMoreElements()){
-//            re+=se.nextElement();
-//        }
-//        return re;
-//    }
-
-    // Implementation of sample interface method
     public Result getMessage(String login, String password, String time, String locale) {
 
         UserService userService = new UserService();
@@ -44,7 +26,6 @@ public class MySampleApplicationServiceImpl extends RemoteServiceServlet impleme
         }
         String storedPassword = user.getPassword();
         boolean result = PasswordUtils.checkPassword(user.getName(), password, storedPassword);
-        // return user.getName()+" - "+password+" - "+storedPassword;
         Result res = new Result();
         Day day = getDay(time);
         Locale currentLocal = getLocale(locale);

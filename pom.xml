@@ -8,22 +8,8 @@
     <artifactId>gwt3</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+
     <properties>
-
-        <!--<modules>-->
-            <!--<module>server</module>-->
-            <!--<module>shared</module>-->
-            <!--<module>web</module>-->
-        <!--</modules>-->
-
-        <!--<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>-->
-        <!-- Convenience property to set the GWT version -->
-        <!--<gwt.version>2.6.0-rc3</gwt.version>-->
-        <!--<tomcat.webport>8082</tomcat.webport>-->
-        <!--<tomcat.ajpport>8182</tomcat.ajpport>-->
-        <!--<tomcat.context>/parent</tomcat.context>-->
-
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
@@ -105,58 +91,6 @@
     </dependencies>
 
     <build>
-        <!--<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>-->
-
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.codehaus.mojo</groupId>-->
-                <!--<artifactId>gwt-maven-plugin</artifactId>-->
-                <!--<version>${gwt.version}</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--<goal>compile</goal>-->
-                            <!--<goal>test</goal>-->
-                            <!--<goal>i18n</goal>-->
-                            <!--&lt;!&ndash;<goal>generateAsync</goal>&ndash;&gt;-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<runTarget>MySampleApplication.html</runTarget>-->
-                    <!--<hostedWebapp>${webappDirectory}</hostedWebapp>-->
-                    <!--&lt;!&ndash;<i18nMessagesBundle></i18nMessagesBundle>&ndash;&gt;-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-war-plugin</artifactId>-->
-                <!--&lt;!&ndash;<executions>&ndash;&gt;-->
-                <!--&lt;!&ndash;<execution>&ndash;&gt;-->
-                <!--&lt;!&ndash;<phase>compile</phase>&ndash;&gt;-->
-                <!--&lt;!&ndash;<goals>&ndash;&gt;-->
-                <!--&lt;!&ndash;<goal>exploded</goal>&ndash;&gt;-->
-                <!--&lt;!&ndash;</goals>&ndash;&gt;-->
-                <!--&lt;!&ndash;</execution>&ndash;&gt;-->
-                <!--&lt;!&ndash;</executions>&ndash;&gt;-->
-                <!--<configuration>-->
-                    <!--<webappDirectory>${webappDirectory}</webappDirectory>-->
-                    <!--<webXml>web\WEB-INF\web.xml</webXml>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-compiler-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<source>${java.version}</source>-->
-                    <!--<target>${java.version}</target>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-
-
-        <!--<defaultGoal>clean install  tomcat7:run-war-only</defaultGoal>-->
-
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -164,15 +98,11 @@
                 <version>2.8.0</version>
                 <executions>
                     <execution>
-                        <!--<configuration>-->
-                            <!--<module>com.mySampleApplication</module>-->
-                        <!--</configuration>-->
                         <goals>
                             <goal>compile</goal>
                         </goals>
                     </execution>
                 </executions>
-                <!--&lt;!&ndash;<version>${gwt.version}</version>&ndash;&gt;-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -186,34 +116,15 @@
 
                     </webResources>
                 </configuration>
-                <!--<version>2.3</version>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-
-                <!--<version>2.5.1</version>-->
                 <configuration>
-
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.apache.tomcat.maven</groupId>-->
-                <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
-                <!--&lt;!&ndash;<version>2.0</version>&ndash;&gt;-->
-                <!--<configuration>-->
-                    <!--<path>${tomcat.context}</path>-->
-                    <!--<port>${tomcat.webport}</port>-->
-                    <!--<ajpPort>${tomcat.ajpport}</ajpPort>-->
-                    <!--<systemProperties>-->
-                        <!--<JAVA_OPTS>-XX:MaxPermSize=256m</JAVA_OPTS>-->
-                    <!--</systemProperties>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
         </plugins>
     </build>
-
-
 </project>

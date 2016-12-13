@@ -1,9 +1,7 @@
 package message;
 
-import com.mySampleApplication.client.MySampleApplicationService;
 import com.mySampleApplication.hibernate.db.tables.User;
 import com.mySampleApplication.hibernate.service.UserService;
-import com.mySampleApplication.security.PasswordUtils;
 import com.mySampleApplication.server.day.Day;
 import org.junit.Test;
 
