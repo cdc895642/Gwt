@@ -3,11 +3,6 @@ jdk:
   - oraclejdk8
 
 sudo: required
-
-before_script:
-#chmod -R 777 /
-#mkdir /gwt3/logs
   
-script: mvn test
-#mvn clean gwt:compile package
+script: mvn clean gwt:compile package
 
