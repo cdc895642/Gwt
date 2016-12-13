@@ -18,15 +18,19 @@ import static org.junit.Assert.*;
  * Created by cdc89 on 13.12.2016.
  */
 public class MessageTest {
+    String login="ivan";
+    String time="0";//1481540858849
 
     @Test
     public void getEnMessageTest(){
-
+        String message=getMessage(login,time,"en");
+        assertEquals("Good night, Иван",message);
     }
 
     @Test
     public void getRuMessageTest(){
-
+        String message=getMessage(login,time,"ru");
+        assertEquals("Доброй ночи, Иван",message);
     }
 
     public String getMessage(String login, String time, String locale) {
@@ -38,7 +42,7 @@ public class MessageTest {
         }
         Day day = getDay(time);
         Locale currentLocal = getLocale(locale);
-        String message = getMessage(day, currentLocal);
+        String message = getMessage(day, currentLocal)+" "+user.getName();
         return message;
     }
 

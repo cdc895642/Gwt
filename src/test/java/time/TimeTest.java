@@ -11,6 +11,9 @@ import static org.junit.Assert.*;
  * Created by cdc89 on 12.12.2016.
  */
 public class TimeTest {
+    /**
+     * get time depending on TimeZone
+     */
     @Ignore
     @Test
     @SuppressWarnings("all")
