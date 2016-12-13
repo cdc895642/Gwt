@@ -3,7 +3,9 @@ jdk:
   - oraclejdk8
 
 before_script:
-chmod -R 777 /
-mkdir /gwt3/logs
+#chmod -R 777 /
+#mkdir /gwt3/logs
   
-script: mvn clean gwt:compile package
+script: 
+#mvn clean gwt:compile package
+mvn test
