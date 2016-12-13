@@ -45,7 +45,7 @@ public class LocalHibernateTest {
      * test for initial operations with DB (create DB, table and insert into the table)
      * test passed successfully
      */
-    //   @Ignore
+    @Ignore
     @Test
     public void test1_createDbStructure() {
         session.beginTransaction();
@@ -74,7 +74,7 @@ public class LocalHibernateTest {
      * test for initial operations with DB (select data fromm user table)
      * test passed successfully
      */
-//    @Ignore
+    @Ignore
     @Test
     public void test2_getRecordTest() {
         Criteria criteria = session.createCriteria(User.class);
