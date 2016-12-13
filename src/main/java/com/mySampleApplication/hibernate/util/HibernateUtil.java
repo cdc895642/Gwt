@@ -1,5 +1,7 @@
 package com.mySampleApplication.hibernate.util;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -8,6 +10,7 @@ import org.hibernate.cfg.Configuration;
  */
 public class HibernateUtil {
     private static final SessionFactory sessionFactory;
+    private static final Logger logger = LogManager.getLogger(HibernateUtil.class.getName());
 
     static {
         try {
@@ -15,7 +18,7 @@ public class HibernateUtil {
             sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } catch (Throwable ex) {
             // Make sure you log the exception, as it might be swallowed
-            System.err.println("Initial SessionFactory creation failed." + ex);
+            logger.error("HibernateUtil init sessionFactory, error - "+ex.getMessage());
             throw new ExceptionInInitializerError(ex);
         }
     }

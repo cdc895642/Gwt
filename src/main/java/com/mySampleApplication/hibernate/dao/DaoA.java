@@ -5,7 +5,6 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 /**
  * Created by cdc89 on 11.12.2016.
@@ -30,8 +29,6 @@ public class DaoA {
     }
 
     public void closeCurrentSession() {
-//        SQLQuery query = currentSession.createSQLQuery("SHUTDOWN");
-//        query.executeUpdate();
         currentSession.close();
     }
 

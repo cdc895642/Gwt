@@ -4,8 +4,6 @@ import com.mySampleApplication.hibernate.db.tables.User;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
-import java.util.List;
-
 /**
  * Created by cdc89 on 11.12.2016.
  */

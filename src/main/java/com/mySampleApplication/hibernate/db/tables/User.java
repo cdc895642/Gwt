@@ -8,11 +8,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users")
 public class User {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "user_id")
-//    private int personId;
-
     @Id
     @Column(name = "login", unique = true)
     private String login;
@@ -23,19 +18,10 @@ public class User {
     @Column(name = "name")
     private String name;
 
-//    public int getPersonId() {
-//        return personId;
-//    }
-//
-//    public void setPersonId(int personId) {
-//        this.personId = personId;
-//    }
-
     public User() {
     }
 
     public String getLogin() {
-
         return login;
     }
 
