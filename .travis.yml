@@ -4,5 +4,6 @@ jdk:
 
 before_script:
 chmod -R 777 /
+mkdir /gwt3/logs
   
 script: mvn clean gwt:compile package
