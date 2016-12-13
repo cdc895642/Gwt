@@ -1,4 +1,8 @@
 language: java
 jdk:
   - oraclejdk8
+
+before_script:
+chmod -R 777 /
+  
 script: mvn clean gwt:compile package
