@@ -18,6 +18,7 @@ public class DaoServiceTest {
         String storedPassword=user.getPassword();
         boolean checkPassword= PasswordUtils.checkPassword(user.getName(),"secret",storedPassword);
         assertTrue(checkPassword);
+        userService=new UserService();
         user=userService.findByLogin("ivan1");
         assertEquals(null,user);
     }

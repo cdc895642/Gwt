@@ -30,6 +30,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="08c725df-e077-42e0-a11f-9549841a819c" />
+          <unit-entry name="test:config:hibernate.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
