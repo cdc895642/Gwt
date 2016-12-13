@@ -26,6 +26,7 @@ public class LocalHibernateTest {
     public static SessionFactory sessionFactory;
     public static Session session;
 
+    @Ignore
     @BeforeClass
     public static void openSession() {
         //sessionFactory = new Configuration().configure("test/config/hibernate.cfg.xml").buildSessionFactory();
@@ -33,6 +34,7 @@ public class LocalHibernateTest {
         session = sessionFactory.openSession();
     }
 
+    @Ignore
     @AfterClass
     public static void closeSession() {
         SQLQuery query = session.createSQLQuery("SHUTDOWN");
@@ -65,7 +67,7 @@ public class LocalHibernateTest {
         Criteria criteria = session.createCriteria(User.class);
         List<User> users = criteria.list();
         for (User u : users) {
-            System.out.println(u.getName()+" - "+u.getPassword());
+            System.out.println(u.getName() + " - " + u.getPassword());
         }
         assertEquals(2, users.size());
     }
@@ -82,7 +84,7 @@ public class LocalHibernateTest {
         List<User> users = criteria.list();
         assertEquals("Иван", users.get(0).getName());
         assertEquals("ivan", users.get(0).getLogin());
-        boolean checkPassword=PasswordUtils.checkPassword("Иван", "secret",users.get(0).getPassword());
+        boolean checkPassword = PasswordUtils.checkPassword("Иван", "secret", users.get(0).getPassword());
         assertTrue(checkPassword);
     }
 }
