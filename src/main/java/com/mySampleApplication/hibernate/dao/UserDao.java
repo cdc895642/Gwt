@@ -13,7 +13,7 @@ public class UserDao extends DaoA {
     public UserDao(){}
 
     public User findByLogin(String login){
-        Criteria criteria = getCurrentSession().createCriteria(User.class);
+        Criteria criteria = openCurrentSession().createCriteria(User.class);
         criteria.add(Restrictions.sqlRestriction("login = '"+login+"'"));
         User user= (User) criteria.uniqueResult();
         return user;

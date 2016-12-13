@@ -14,7 +14,7 @@ public class UserService {
     }
 
     public User findByLogin(String login){
-        userDao.openCurrentSession();
+        //userDao.openCurrentSession();
         User user=userDao.findByLogin(login);
         userDao.closeCurrentSession();
         return user;

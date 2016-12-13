@@ -1,5 +1,6 @@
 package time;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.time.LocalTime;
@@ -10,6 +11,7 @@ import static org.junit.Assert.*;
  * Created by cdc89 on 12.12.2016.
  */
 public class TimeTest {
+    @Ignore
     @Test
     @SuppressWarnings("all")
     public void getTimeTest(){
